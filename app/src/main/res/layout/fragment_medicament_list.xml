@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4"
+    android:orientation="vertical"
+    tools:context=".MedicamentFragment">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_gravity="right"
+        app:backgroundTint="@color/teal_700" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="82dp" />
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add new medicament"
+            app:backgroundTint="#009688" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="119dp" />
+
+        <TextView
+            android:id="@+id/mode"
+            android:layout_width="156dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="offline"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+    </TableRow>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_list"
+        android:layout_width="match_parent"
+        android:layout_height="578dp"
+        app:layoutManager="LinearLayoutManager"/>
+
+</LinearLayout>

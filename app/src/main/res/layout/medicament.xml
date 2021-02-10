@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TableRow
+        android:layout_width="600px"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="@color/black" />
+
+    <TextView
+
+        android:id="@+id/name_med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:background="#009688"
+        android:capitalize="characters"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_gravity="center"
+        tools:text="jvd" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="141dp"
+        app:srcCompat="@drawable/paracetamol" />
+
+    <TextView
+        android:id="@+id/description_ded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="kgbg"
+        android:layout_gravity="center"
+        android:textAppearance="?attr/textAppearanceListItem" />
+</LinearLayout>

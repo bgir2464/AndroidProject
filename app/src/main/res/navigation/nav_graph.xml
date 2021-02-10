@@ -3,26 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/medicamentFragment">
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.example.myapplication.auth.login.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragment_login_to_medicamentFragment"
+            app:destination="@id/medicamentFragment" />
+    </fragment>
+
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.myapplication.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/medicamentFragment"
+        android:name="com.example.myapplication.MedicamentFragment"
+        android:label="fragment_medicament_list"
+        tools:layout="@layout/fragment_medicament_list"
+
+        >
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_medicamentFragment_to_editFragment"
+            app:destination="@id/editFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_medicamentFragment_to_fragment_login"
+            app:destination="@id/fragment_login" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.myapplication.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/editFragment"
+        android:name="com.example.myapplication.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
 </navigation>
